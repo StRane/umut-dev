@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+  body{
+    @apply bg-[#141414] !scrollbar-none font-space text-[#00FF41];
+  }
+  h1{
+    @apply text-4xl font-bold md:text-5xl lg:text-7xl animate-glitch-anim relative text-shadow-md;
+  }
+  h1::before{
+    @apply content-[attr(data-text)] absolute top-0 left-0 w-full animate-glitch-top clip-effect;
+  }
+  h1::after{
+    @apply content-[attr(data-text)] absolute top-0 left-0 w-full animate-glitch-bot clip-effect2;
+  }
+  h2{
+    @apply text-3xl font-semibold text-shadow-h2 md:text-4xl lg:text-5xl
+  }
+  h3{
+    @apply text-2xl font-medium md:text-3xl lg:text-5xl
+  }
+/*   header{
+    @apply fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6
+  }*/
+}
+
+@layer utilities{ 
+    .clip-effect {
+      clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    }
+    .clip-effect2 {
+      clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    }
+}
