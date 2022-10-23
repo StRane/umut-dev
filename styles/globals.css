@@ -4,26 +4,36 @@
 
 @layer base{
   body{
-    @apply bg-[#141414] !scrollbar-none font-space text-[#00FF41];
+    @apply bg-[#010204e8] !scrollbar-none font-space text-[#00FF41];
   }
   h1{
-    @apply text-4xl font-bold md:text-5xl lg:text-7xl animate-glitch-anim relative text-shadow-md;
+    @apply text-4xl lg:text-left font-bold md:text-5xl lg:text-5xl;
   }
-  h1::before{
-    @apply content-[attr(data-text)] absolute top-0 left-0 w-full animate-glitch-top clip-effect;
-  }
-  h1::after{
-    @apply content-[attr(data-text)] absolute top-0 left-0 w-full animate-glitch-bot clip-effect2;
-  }
+
   h2{
     @apply text-3xl font-semibold text-shadow-h2 md:text-4xl lg:text-5xl
   }
   h3{
-    @apply text-2xl font-medium md:text-3xl lg:text-5xl
+    @apply text-left text-2xl font-medium md:text-3xl lg:text-4xl
   }
-/*   header{
-    @apply fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6
-  }*/
+}
+
+@layer components{
+  .glitch{
+    @apply animate-glitch-anim relative text-shadow-md;
+  }
+  .glitchbefore{
+    @apply content-[attr(data-text)] absolute top-1.5 left-0 w-full animate-glitch-top clip-effect
+  }
+  .glitchafter{
+    @apply content-[attr(data-text)] absolute top-1.5 left-0 w-full animate-glitch-bot clip-effect2;
+  }
+  .listhover{
+    @apply transition -translate-y-0.5 text-shadow-md duration-300 ease-in
+  }
+  .listunderline{
+    @apply absolute left-1/2 -translate-x-1/2 h-px w-0 transition-all duration-300 border-[#00FF41] origin-left block opacity-0 group-hover:opacity-100  group-hover:-translate-x-1/2 group-hover:w-full group-hover:h-10;
+  }
 }
 
 @layer utilities{ 
