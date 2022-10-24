@@ -5,8 +5,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    listStyleType: {
+      square: 'square',
+    },
     textShadow: {
       default: "0 2px 0 #000",
+      sm: "0 1px 1px #00FF41",
       md: "0 2px 2px #00FF41",
       h2: "0 0 3px #008F11, 0 0 5px #008F11",
       h1: "0 2px 3px rgba(0, 143, 17, .8), 0 2px 5px rgba(0, 143, 17, .9)",

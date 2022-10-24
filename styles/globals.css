@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer base{
+  html{
+    @apply scroll-smooth
+  }
   body{
-    @apply bg-[#010204e8] !scrollbar-none font-space text-[#00FF41];
+    @apply bg-[#010204e8] !scrollbar-none font-space text-[#1ed934];
   }
   h1{
     @apply text-4xl lg:text-left font-bold md:text-5xl lg:text-5xl;
@@ -14,7 +17,10 @@
     @apply text-3xl font-semibold text-shadow-h2 md:text-4xl lg:text-5xl
   }
   h3{
-    @apply text-left text-2xl font-medium md:text-3xl lg:text-4xl
+    @apply text-left text-lg font-medium md:text-xl lg:text-2xl w-full lg:w-3/5 text-shadow-sm
+  }
+  p{
+    @apply text-sm sm:text-base md:text-lg text-shadow-sm;
   }
 }
 
@@ -33,6 +39,9 @@
   }
   .listunderline{
     @apply absolute left-1/2 -translate-x-1/2 h-px w-0 transition-all duration-300 border-[#00FF41] origin-left block opacity-0 group-hover:opacity-100  group-hover:-translate-x-1/2 group-hover:w-full group-hover:h-10;
+  }
+  .aboutlistitem{
+    @apply text-shadow-sm before:absolute before:content-['🞠'] before:-left-4 before:top-0 pl-3 before:text-shadow-sm;
   }
 }
 

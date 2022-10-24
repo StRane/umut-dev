@@ -1,13 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import { useEffect, useState } from "react";
 import AboutMe from "../components/AboutMe";
 import Header from "../components/Header";
 import Projects from "../components/Projects";
 
 const Home: NextPage = () => {
+
   return (
-    <div className="relative h-screen bg-gradient-to-b lg:h-[140vh]">
+    <div className="relative">
       <Head>
         <title>Umut_Dev</title>
         <link rel="icon" href="/favicon.ico" />
@@ -21,10 +22,10 @@ const Home: NextPage = () => {
           name="description"
           content="Displaying projects and capabilities"
         />
-        <meta name="theme-color" content="dark"/>
+        <meta name="theme-color" content="dark" />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col text-center px-10">
+      <main className="flex w-full flex-col text-center px-10">
         <Header />
         <AboutMe />
         <Projects />
