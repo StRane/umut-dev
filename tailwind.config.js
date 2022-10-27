@@ -6,7 +6,7 @@ module.exports = {
   ],
   theme: {
     listStyleType: {
-      square: 'square',
+      square: "square",
     },
     textShadow: {
       default: "0 2px 0 #000",
@@ -16,6 +16,7 @@ module.exports = {
       h1: "0 2px 3px rgba(0, 143, 17, .8), 0 2px 5px rgba(0, 143, 17, .9)",
       h1before: "-2px 0 #008F11",
       h1after: "-2px 0 #008F11, 2px 2px #00FF41",
+      row: "0 0px 0px #fff",
     },
     extend: {
       /* backgroundImage: {
@@ -67,5 +68,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwind-scrollbar"), require("tailwindcss-textshadow")],
+  plugins: [
+    require("tailwind-scrollbar"),
+    require("tailwindcss-textshadow"),
+    require("daisyui"),
+  ],
 };

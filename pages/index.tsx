@@ -25,7 +25,7 @@ const Home: NextPage = () => {
         <meta name="theme-color" content="dark" />
       </Head>
 
-      <main className="flex w-full flex-col text-center px-10">
+      <main className="flex w-full flex-col text-center">
         <Header />
         <AboutMe />
         <Projects />

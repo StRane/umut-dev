@@ -2,54 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  html{
-    @apply scroll-smooth
+@layer base {
+  html {
+    @apply scroll-smooth;
   }
-  body{
-    @apply bg-[#010204e8] !scrollbar-none font-space text-[#1ed934];
+  body {
+    @apply bg-[#010204e8] !scrollbar-none font-space text-[#1ed934] px-10;
   }
-  h1{
+  h1 {
     @apply text-4xl lg:text-left font-bold md:text-5xl lg:text-5xl;
   }
 
-  h2{
-    @apply text-3xl font-semibold text-shadow-h2 md:text-4xl lg:text-5xl
+  h2 {
+    @apply text-2xl font-semibold text-shadow-h2 md:text-4xl lg:text-5xl;
   }
-  h3{
-    @apply text-left text-lg font-medium md:text-xl lg:text-2xl w-full lg:w-3/5 text-shadow-sm
+  h3 {
+    @apply text-left text-lg font-medium md:text-xl lg:text-2xl w-full lg:w-3/5 text-shadow-sm;
   }
-  p{
-    @apply text-sm sm:text-base md:text-lg text-shadow-sm;
+  p {
+    @apply text-sm sm:text-base md:text-lg;
   }
 }
 
-@layer components{
-  .glitch{
+@layer components {
+  .glitch {
     @apply animate-glitch-anim relative text-shadow-md;
   }
-  .glitchbefore{
-    @apply content-[attr(data-text)] absolute top-1.5 left-0 w-full animate-glitch-top clip-effect
+  .glitchbefore {
+    @apply content-[attr(data-text)] absolute left-0 w-full animate-glitch-top clip-effect;
   }
-  .glitchafter{
-    @apply content-[attr(data-text)] absolute top-1.5 left-0 w-full animate-glitch-bot clip-effect2;
+  .glitchafter {
+    @apply content-[attr(data-text)] absolute left-0 w-full animate-glitch-bot clip-effect2;
   }
-  .listhover{
-    @apply transition -translate-y-0.5 text-shadow-md duration-300 ease-in
+  .listhover {
+    @apply transition -translate-y-0.5 text-shadow-md duration-300 ease-in;
   }
-  .listunderline{
+  .listunderline {
     @apply absolute left-1/2 -translate-x-1/2 h-px w-0 transition-all duration-300 border-[#00FF41] origin-left block opacity-0 group-hover:opacity-100  group-hover:-translate-x-1/2 group-hover:w-full group-hover:h-10;
   }
-  .aboutlistitem{
+  .aboutlistitem {
     @apply text-shadow-sm before:absolute before:content-['🞠'] before:-left-4 before:top-0 pl-3 before:text-shadow-sm;
   }
+  .buttonstyle {
+    @apply h-16 w-16 fill-none border-[12px] border-transparent stroke-white stroke-2	 rounded-full bg-[#1ed93498];
+  }
+
+  /*Styling of old projects rows */
+  .projectIcon {
+    @apply h-5 w-5 sm:h-7 sm:w-7 transition cursor-pointer duration-300 hover:fill-white;
+  }
+  .row {
+    @apply min-h-[250px] w-full mx-auto sm:w-4/5 relative block rounded-lg overflow-clip md:w-full xl:w-3/4 md:z-20;
+  }
+  .translateOdd {
+    @apply md:translate-x-28 lg:translate-x-52 xl:translate-x-[19rem];
+  }
+  .translateEven{
+  @apply md:-translate-x-10 lg:-translate-x-12 xl:-translate-x-32;
+  }
+  .rowPic{
+    @apply min-h-[175px] md:min-h-[200px]  lg:min-h-[225px] md:h-1/2 md:my-auto md:w-4/5 hidden md:inline-block xl:w-1/2 relative rounded-sm overflow-clip;}
 }
 
-@layer utilities{ 
-    .clip-effect {
-      clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-    }
-    .clip-effect2 {
-      clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-    }
+@layer utilities {
+  .clip-effect {
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+  .clip-effect2 {
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
 }
