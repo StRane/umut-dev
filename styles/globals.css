@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth snap-start;
   }
   body {
     @apply bg-[#010204e8] !scrollbar-none font-space text-[#1ed934] px-10;
@@ -20,7 +20,7 @@
     @apply text-left text-lg font-medium md:text-xl lg:text-2xl w-full lg:w-3/5 text-shadow-sm;
   }
   p {
-    @apply text-sm sm:text-base md:text-lg;
+    @apply text-sm sm:text-base md:text-lg text-shadow-sm;
   }
 }
 
@@ -57,11 +57,19 @@
   .translateOdd {
     @apply md:translate-x-28 lg:translate-x-52 xl:translate-x-[19rem];
   }
-  .translateEven{
-  @apply md:-translate-x-10 lg:-translate-x-12 xl:-translate-x-32;
+  .translateEven {
+    @apply md:-translate-x-10 lg:-translate-x-12 xl:-translate-x-32;
   }
-  .rowPic{
-    @apply min-h-[175px] md:min-h-[200px]  lg:min-h-[225px] md:h-1/2 md:my-auto md:w-4/5 hidden md:inline-block xl:w-1/2 relative rounded-sm overflow-clip;}
+  .rowPic {
+    @apply min-h-[175px] md:min-h-[200px]  lg:min-h-[225px] md:h-1/2 md:my-auto md:w-4/5 hidden md:inline-block xl:w-1/2 relative rounded-sm overflow-clip;
+  }
+
+  .leftBarItem {
+    @apply h-6 w-6 lg:w-7 lg:h-7 fill-[#1ed934] transition-transform hover:-translate-y-1 duration-150 inline-block mr-1 lg:mb-2 translate-x-0.5;
+  }
+  .nextList{
+    @apply border-2 m-5 border-[#008F11] hover:bg-[#008F11] hover:text-white transition-colors duration-200 ease-in align-middle;
+  }
 }
 
 @layer utilities {

@@ -2,17 +2,17 @@ import Image from "next/image";
 import ProfilePic from "../images/1636693859327.jpg";
 import { useRef } from "react";
 
+
 function AboutMe() {
-  const myRef = useRef<HTMLInputElement>(null);
 
   return (
     <div className="min-h-screen lg:mx-28">
-      <h2 ref={myRef} className="pt-20 pb-10 md:pt-20">
+      <h2 className="pt-20 pb-10 md:pt-20">
         AboutMe
         <hr className="w-full h-[1px] border-[#008F11]" />
       </h2>
       <div className="flex flex-col-reverse md:flex-row">
-        <div className="w-full">
+        <div className="w-full xl:pl-40">
           <div className="flex flex-col space-y-2 md:space-y-8 lg:space-y-12 lg:text-left">
             <p>
               Hello! My name is Umut and I enjoy creating things that live on
@@ -34,7 +34,7 @@ function AboutMe() {
             </ul>
           </div>
         </div>
-        <div className="w-full sm:w-3/4 sm:mx-auto md:w-3/5 pb-10 sm:px-4 md:px-1 lg:px-6">
+        <div className="w-4/5 sm:w-3/5 mx-auto md:w-7/12 pb-10 sm:px-4 md:px-1 lg:px-6 xl:pr-40">
           <Image
             src={ProfilePic}
             alt="picture of developer"

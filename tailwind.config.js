@@ -22,10 +22,17 @@ module.exports = {
       /* backgroundImage: {
         stars: "url(https://i.gifer.com/2iiB.gif)"
       }, */
+      dropShadow: {
+        "nav": "0 3px 3px rgba(0, 143, 17, .9)",
+      },
       fontFamily: {
         space: ["Space Mono", "monospace"],
       },
       keyframes: {
+        appear: {
+          "0%, 20%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
         glitch: {
           "2%,64%": {
             transform: "translate(2px,0) skew(0deg)",
@@ -65,6 +72,7 @@ module.exports = {
         "glitch-anim": "glitch 1s linear infinite",
         "glitch-top": "glitchTop 1s linear infinite",
         "glitch-bot": "glitchBotom 1.5s linear infinite",
+        appearBar: "appear 2s ease-in 1",
       },
     },
   },

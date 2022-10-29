@@ -7,13 +7,17 @@ import Image1 from "../images/Old projects/Netf/Net1.webp";
 import Image2 from "../images/Old projects/Chonburian/Chonburian1.webp";
 import Image3 from "../images/Old projects/Quotes/Quotes1.webp";
 import Image4 from "../images/Old projects/Food/Food1.webp";
+import Link from "next/link";
 
 function ProjectItem() {
   return (
     <>
       <div className="row translateOdd">
         <div className="z-20 relative space-y-6 md:top-0 md:left-0 md:space-y-8 lg:w-2/3">
-          <h4 className="text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore" data-text="Netflix Clone">
+          <h4
+            className="text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
+            data-text="Netflix Clone"
+          >
             Netflix Clone
           </h4>
           <div className="mx-12 md:mx-0 space-y-3 md:space-y-5 text-left">
@@ -27,8 +31,16 @@ function ProjectItem() {
                 NextJS Typescript MUI Firebase API Vercel
               </p>
               <div className="flex">
-                <DiGithubBadge className="projectIcon" />
-                <HiExternalLink className="projectIcon" />
+                <Link href="https://github.com/StRane/netflix-clone-tsx-tailwind-next">
+                  <a target="_blank">
+                    <DiGithubBadge className="projectIcon" />
+                  </a>
+                </Link>
+                <Link href="https://netflix-clone-tsx-tailwind-next.vercel.app/">
+                  <a target="_blank">
+                    <HiExternalLink className="projectIcon" />
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -62,7 +74,10 @@ function ProjectItem() {
       <div className="row translateEven">
         <div className="z-20 relative space-y-6 md:top-0 md:left-0 md:space-y-8 lg:w-2/3">
           {/* Put some dim color as a theme */}
-          <h4 className="text-shadow-row text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore" data-text="Chonburian">
+          <h4
+            className="text-shadow-row text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
+            data-text="Chonburian"
+          >
             Chonburian
           </h4>
           <div className="mx-12 md:mx-0 space-y-3 md:space-y-5 text-left">
@@ -77,7 +92,11 @@ function ProjectItem() {
               </p>
               <div className="flex">
                 <DiGithubBadge className="projectIcon" />
-                <HiExternalLink className="projectIcon" />
+                <Link href="https://next-js-course-demo-chon-burian.vercel.app/">
+                  <a target="_blank">
+                    <HiExternalLink className="projectIcon" />
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -93,7 +112,10 @@ function ProjectItem() {
       <div className="row translateOdd">
         <div className="z-20 relative space-y-6 md:top-0 md:left-0 md:space-y-8 lg:w-2/3">
           {/* Put some dim color as a theme */}
-          <h4 className="text-shadow-row text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore" data-text="Quotes">
+          <h4
+            className="text-shadow-row text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
+            data-text="Quotes"
+          >
             Quotes
           </h4>
           <div className="mx-12 md:mx-0 space-y-3 md:space-y-5 text-left">
@@ -108,7 +130,11 @@ function ProjectItem() {
               </p>
               <div className="flex">
                 <DiGithubBadge className="projectIcon" />
-                <HiExternalLink className="projectIcon" />
+                <Link href="https://deployed-c03e9.web.app/quotes">
+                  <a target="_blank">
+                    <HiExternalLink className="projectIcon" />
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -141,7 +167,10 @@ function ProjectItem() {
       </div>
       <div className="row translateEven">
         <div className="z-20 relative space-y-6 md:top-0 md:left-0 md:space-y-8 lg:w-2/3">
-          <h4 className="text-shadow-row text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore" data-text="Food Order">
+          <h4
+            className="text-shadow-row text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
+            data-text="Food Order"
+          >
             Food Order
           </h4>
           <div className="mx-12 md:mx-0 space-y-3 md:space-y-5 text-left">

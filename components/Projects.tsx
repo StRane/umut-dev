@@ -1,8 +1,9 @@
+
 import ProjectItem from "./ProjectItem";
 
 function Projects() {
   return (
-    <div className="min-h-screen lg:mx-28">
+    <div className="lg:mx-28">
       <h2 className="pt-20 pb-10 md:pt-20">
         Projects
         <hr className="w-full h-[1px] border-[#008F11]" />
