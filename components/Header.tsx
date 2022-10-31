@@ -74,7 +74,7 @@ function Header({
               >
                 <button
                   className="flex-1 cursor-pointer"
-                  aria-label="Top part of the page"
+                  aria-label="Top of the page"
                   onClick={() => clickHandler(0)}
                 >
                   <DiTerminal className="h-6 w-6 hover:fill-white cursor-pointer" />
@@ -139,7 +139,7 @@ function Header({
               enterTo="opacity-100 translate-y-0"
             >
               <Link href="https://github.com/StRane">
-                <a target="_blank">
+                <a target="_blank" aria-label="Link to developers Github page">
                   <DiGithubBadge className="h-6 w-6 hover:fill-white cursor-pointer" />
                 </a>
               </Link>
@@ -151,7 +151,10 @@ function Header({
               enterTo="opacity-100 translate-y-0"
             >
               <Link href="https://discord.com/users/283694054661816326">
-                <a target="_blank">
+                <a
+                  target="_blank"
+                  aria-label="Link to developers discord account"
+                >
                   <FaDiscord className="h-6 w-6 hover:fill-white cursor-pointer" />
                 </a>
               </Link>
@@ -165,20 +168,27 @@ function Header({
           isDownAlot ? `opacity-0 md:opacity-100` : `opacity-0 translate-y-1/3`
         }`}
       >
-        <a className="cursor-pointer" onClick={() => clickHandler(0)}>
+        <button
+          className="cursor-pointer"
+          onClick={() => clickHandler(0)}
+          aria-label="Left Sidebar top of the page"
+        >
           <HiArrowNarrowUp className="leftBarItem" />
-        </a>
+        </button>
 
         <hr className="w-0 mx-auto border-l border-green-matrix h-[20px] mb-1" />
         <Link href="https://github.com/StRane">
-          <a target="_blank">
+          <a target="_blank" aria-label="Sidelink to developers Github page">
             <DiGithubBadge className="leftBarItem" />
           </a>
         </Link>
 
         <Link href="https://www.linkedin.com/in/umut-%C5%9Feber-5519b2183/">
           <a target="_blank">
-            <FaLinkedin className="leftBarItem" />
+            <FaLinkedin
+              className="leftBarItem"
+              aria-label="Sidelink to developers LinkedIn page"
+            />
           </a>
         </Link>
 
@@ -187,7 +197,7 @@ function Header({
         </a>
 
         <Link href="mailto:umut.seber@gmail.com">
-          <a>
+          <a aria-label="Mail to developer">
             <FaMailBulk className="leftBarItem" />
           </a>
         </Link>
@@ -200,9 +210,13 @@ function Header({
           isDownAlot ? `opacity-0 md:opacity-100` : `opacity-0 translate-y-full`
         }`}
       >
-        <a className="cursor-pointer" onClick={() => clickHandler(0)}>
+        <button
+          className="cursor-pointer"
+          onClick={() => clickHandler(0)}
+          aria-label="Right sidebar top of the page"
+        >
           <HiArrowNarrowLeft className="h-6 w-6 lg:w-7 lg:h-7 fill-green-matrix transition-transform hover:-translate-x-1 duration-150 inline-block mr-1 lg:mr-2" />
-        </a>
+        </button>
         <hr className="h-1 w-10 inline-block mr-1 lg:mr-2 border-green-matrix" />
         <p className="text-sm lg:text-base text-green-matrix inline-block mr-1 lg:mr-2">
           umut.seber@gmail.com

@@ -32,12 +32,12 @@ function ProjectItem() {
               </p>
               <div className="flex">
                 <Link href="https://github.com/StRane/netflix-clone-tsx-tailwind-next">
-                  <a target="_blank">
+                  <a target="_blank" aria-label='Link to project Netflix clone Github repo' >
                     <DiGithubBadge className="projectIcon" />
                   </a>
                 </Link>
                 <Link href="https://netflix-clone-tsx-tailwind-next.vercel.app/">
-                  <a target="_blank">
+                  <a target="_blank" aria-label='Link to project Netflix clone webpage'>
                     <HiExternalLink className="projectIcon" />
                   </a>
                 </Link>
@@ -93,7 +93,7 @@ function ProjectItem() {
               <div className="flex">
                 <DiGithubBadge className="projectIcon" />
                 <Link href="https://next-js-course-demo-chon-burian.vercel.app/">
-                  <a target="_blank">
+                  <a target="_blank" aria-label='Link to project Chonburian webpage'>
                     <HiExternalLink className="projectIcon" />
                   </a>
                 </Link>
@@ -131,7 +131,7 @@ function ProjectItem() {
               <div className="flex">
                 <DiGithubBadge className="projectIcon" />
                 <Link href="https://deployed-c03e9.web.app/quotes">
-                  <a target="_blank">
+                  <a target="_blank" aria-label='Link to project Quotes webpage'>
                     <HiExternalLink className="projectIcon" />
                   </a>
                 </Link>
@@ -186,7 +186,7 @@ function ProjectItem() {
               <div className="flex">
                 <DiGithubBadge className="projectIcon" />
                 <Link href="https://food-order-bf370.web.app/">
-                  <a target="_blank">
+                  <a target="_blank" aria-label='Link to project Food Order website'>
                     <HiExternalLink className="projectIcon" />
                   </a>
                 </Link>
