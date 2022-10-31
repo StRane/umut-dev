@@ -185,7 +185,11 @@ function ProjectItem() {
               </p>
               <div className="flex">
                 <DiGithubBadge className="projectIcon" />
-                <HiExternalLink className="projectIcon" />
+                <Link href="https://food-order-bf370.web.app/">
+                  <a target="_blank">
+                    <HiExternalLink className="projectIcon" />
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

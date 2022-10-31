@@ -7,7 +7,7 @@
     @apply scroll-smooth snap-start;
   }
   body {
-    @apply bg-[#010204e8] !scrollbar-none font-space text-[#1ed934] px-10;
+    @apply bg-[#010204e8] !scrollbar-none font-space px-10 text-green-matrix;
   }
   h1 {
     @apply text-4xl lg:text-left font-bold md:text-5xl lg:text-5xl;
@@ -38,7 +38,7 @@
     @apply transition -translate-y-0.5 text-shadow-md duration-300 ease-in;
   }
   .listunderline {
-    @apply absolute left-1/2 -translate-x-1/2 h-px w-0 transition-all duration-300 border-[#00FF41] origin-left block opacity-0 group-hover:opacity-100  group-hover:-translate-x-1/2 group-hover:w-full group-hover:h-10;
+    @apply absolute left-1/2 -translate-x-1/2 h-px w-0 transition-all duration-300 border-green-mlight origin-left block opacity-0 group-hover:opacity-100  group-hover:-translate-x-1/2 group-hover:w-full group-hover:h-10;
   }
   .aboutlistitem {
     @apply text-shadow-sm before:absolute before:content-['🞠'] before:-left-4 before:top-0 pl-3 before:text-shadow-sm;
@@ -65,10 +65,10 @@
   }
 
   .leftBarItem {
-    @apply h-6 w-6 lg:w-7 lg:h-7 fill-[#1ed934] transition-transform hover:-translate-y-1 duration-150 inline-block mr-1 lg:mb-2 translate-x-0.5;
+    @apply h-6 w-6 lg:w-7 lg:h-7 fill-green-matrix transition-transform hover:-translate-y-1 duration-150 inline-block mr-1 lg:mb-2 translate-x-0.5;
   }
   .nextList{
-    @apply border-2 m-5 border-[#008F11] hover:bg-[#008F11] hover:text-white transition-colors duration-200 ease-in align-middle;
+    @apply border-2 m-5 border-green-mdark hover:bg-green-mdark hover:text-white transition-colors duration-200 ease-in align-middle;
   }
 }
 

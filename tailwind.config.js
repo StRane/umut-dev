@@ -19,11 +19,15 @@ module.exports = {
       row: "0 0px 0px #fff",
     },
     extend: {
-      /* backgroundImage: {
-        stars: "url(https://i.gifer.com/2iiB.gif)"
-      }, */
+      colors: {
+        green: {
+          matrix: "#1ed934",
+          mdark: '#008F11',
+          mlight: '#00FF41'
+        },
+      },
       dropShadow: {
-        "nav": "0 3px 3px rgba(0, 143, 17, .9)",
+        nav: "0 3px 3px rgba(0, 143, 17, .9)",
       },
       fontFamily: {
         space: ["Space Mono", "monospace"],

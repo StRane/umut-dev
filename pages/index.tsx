@@ -6,6 +6,7 @@ import AboutMe from "../components/AboutMe";
 import Header from "../components/Header";
 import Projects from "../components/Projects";
 import WhatsNext from "../components/WhatsNext";
+import Footer from '../components/Footer';
 
 
 const Home: NextPage = () => {
@@ -63,8 +64,8 @@ const Home: NextPage = () => {
             </section>
           </main>
 
-          <footer className="flex h-14 w-full items-center justify-center">
-            <p>Designed & build by Umut Seber</p>
+          <footer className="flex w-full items-center justify-center">
+            <Footer />
           </footer>
 
     </div>

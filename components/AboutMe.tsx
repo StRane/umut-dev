@@ -9,7 +9,7 @@ function AboutMe() {
     <div className="min-h-screen lg:mx-28">
       <h2 className="pt-20 pb-10 md:pt-20">
         AboutMe
-        <hr className="w-full h-[1px] border-[#008F11]" />
+        <hr className="w-full h-[1px] border-green-mdark" />
       </h2>
       <div className="flex flex-col-reverse md:flex-row">
         <div className="w-full xl:pl-40">
