@@ -74,6 +74,7 @@ function Header({
               >
                 <button
                   className="flex-1 cursor-pointer"
+                  aria-label="Top part of the page"
                   onClick={() => clickHandler(0)}
                 >
                   <DiTerminal className="h-6 w-6 hover:fill-white cursor-pointer" />
@@ -91,6 +92,7 @@ function Header({
                   data-text="About"
                   className="h-10 hover:glitch hover:after:glitchafter hover:before:glitchbefore cursor-pointer"
                   onClick={() => clickHandler(positionAbout)}
+                  aria-label="Link to About part of the page"
                 >
                   About
                 </button>
@@ -107,6 +109,7 @@ function Header({
                   data-text="Work"
                   className="h-10 hover:glitch  hover:after:glitchafter hover:before:glitchbefore cursor-pointer"
                   onClick={() => clickHandler(positionProject)}
+                  aria-label="Link to my projects"
                 >
                   Work
                 </button>
@@ -123,6 +126,7 @@ function Header({
                   data-text="Contact"
                   className="h-10 hover:glitch  hover:after:glitchafter hover:before:glitchbefore cursor-pointer"
                   onClick={() => clickHandler(positionNext)}
+                  aria-label="Link to my contact me part"
                 >
                   Contact
                 </button>
