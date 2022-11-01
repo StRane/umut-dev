@@ -56,111 +56,117 @@ function Header({
   return (
     <>
       <nav
-        className={`w-full z-30 fixed -translate-x-10 px-4 lg:px-20 bg-black ${
+        className={`w-full z-30 fixed -translate-x-10 px-4 lg:px-20 bg-[#010204] ${
           isScrolled && `drop-shadow-nav`
         }`}
       >
-        <ul className="p-4">
-          <Transition
-            show={!showing}
-            className="flex space-x-4 text-sm md:text-base lg:text-xl md:space-x-5 lg:space-x-7 items-center"
-          >
-            <li className="flex-1 text-left">
-              <Transition.Child
-                appear={true}
-                enter="transition-all delay-0 duration-75 flex-1"
-                enterFrom="opacity-0 -translate-y-full flex-1"
-                enterTo="opacity-100 translate-y-0 flex-1"
-              >
-                <button
-                  className="flex-1 cursor-pointer"
-                  aria-label="Top of the page"
-                  onClick={() => clickHandler(0)}
+        <>
+          <Transition show={!showing}>
+            <ul className="p-4 flex space-x-4 text-sm md:text-base lg:text-xl md:space-x-5 lg:space-x-7 items-center">
+              <li className="flex-1 text-left">
+                <Transition.Child
+                  appear={true}
+                  enter="transition-all delay-0 duration-75 flex-1"
+                  enterFrom="opacity-0 -translate-y-full flex-1"
+                  enterTo="opacity-100 translate-y-0 flex-1"
                 >
-                  <DiTerminal className="h-6 w-6 hover:fill-white cursor-pointer" />
-                </button>
-              </Transition.Child>
-            </li>
-            <li>
-              <Transition.Child
-                appear={true}
-                enter="transition-all delay-100 duration-75"
-                enterFrom="opacity-0 -translate-y-full"
-                enterTo="opacity-100 translate-y-0"
-              >
-                <button
-                  data-text="About"
-                  className="h-10 hover:glitch hover:after:glitchafter hover:before:glitchbefore cursor-pointer"
-                  onClick={() => clickHandler(positionAbout)}
-                  aria-label="Link to About part of the page"
+                  <button
+                    className="flex-1 cursor-pointer"
+                    aria-label="Top of the page"
+                    onClick={() => clickHandler(0)}
+                  >
+                    <DiTerminal className="h-6 w-6 hover:fill-white cursor-pointer" />
+                  </button>
+                </Transition.Child>
+              </li>
+              <li>
+                <Transition.Child
+                  appear={true}
+                  enter="transition-all delay-100 duration-75"
+                  enterFrom="opacity-0 -translate-y-full"
+                  enterTo="opacity-100 translate-y-0"
                 >
-                  About
-                </button>
-              </Transition.Child>
-            </li>
-            <li>
-              <Transition.Child
-                appear={true}
-                enter="transition-all delay-300 duration-75"
-                enterFrom="opacity-0 -translate-y-full"
-                enterTo="opacity-100 translate-y-0"
-              >
-                <button
-                  data-text="Work"
-                  className="h-10 hover:glitch  hover:after:glitchafter hover:before:glitchbefore cursor-pointer"
-                  onClick={() => clickHandler(positionProject)}
-                  aria-label="Link to my projects"
+                  <button
+                    data-text="About"
+                    className="h-10 hover:glitch hover:after:glitchafter hover:before:glitchbefore cursor-pointer"
+                    onClick={() => clickHandler(positionAbout)}
+                    aria-label="Link to About part of the page"
+                  >
+                    About
+                  </button>
+                </Transition.Child>
+              </li>
+              <li>
+                <Transition.Child
+                  appear={true}
+                  enter="transition-all delay-300 duration-75"
+                  enterFrom="opacity-0 -translate-y-full"
+                  enterTo="opacity-100 translate-y-0"
                 >
-                  Work
-                </button>
-              </Transition.Child>
-            </li>
-            <li>
-              <Transition.Child
-                appear={true}
-                enter="transition-all delay-500 duration-75"
-                enterFrom="opacity-0 -translate-y-full"
-                enterTo="opacity-100 translate-y-0"
-              >
-                <button
-                  data-text="Contact"
-                  className="h-10 hover:glitch  hover:after:glitchafter hover:before:glitchbefore cursor-pointer"
-                  onClick={() => clickHandler(positionNext)}
-                  aria-label="Link to my contact me part"
+                  <button
+                    data-text="Work"
+                    className="h-10 hover:glitch  hover:after:glitchafter hover:before:glitchbefore cursor-pointer"
+                    onClick={() => clickHandler(positionProject)}
+                    aria-label="Link to my projects"
+                  >
+                    Work
+                  </button>
+                </Transition.Child>
+              </li>
+              <li>
+                <Transition.Child
+                  appear={true}
+                  enter="transition-all delay-500 duration-75"
+                  enterFrom="opacity-0 -translate-y-full"
+                  enterTo="opacity-100 translate-y-0"
                 >
-                  Contact
-                </button>
-              </Transition.Child>
-            </li>
-            <Transition.Child
-              appear={true}
-              enter="transition-all delay-700 duration-75"
-              enterFrom="opacity-0 -translate-y-full"
-              enterTo="opacity-100 translate-y-0"
-            >
-              <Link href="https://github.com/StRane">
-                <a target="_blank" aria-label="Link to developers Github page">
-                  <DiGithubBadge className="h-6 w-6 hover:fill-white cursor-pointer" />
-                </a>
-              </Link>
-            </Transition.Child>
-            <Transition.Child
-              appear={true}
-              enter="transition-all delay-[900ms] duration-75"
-              enterFrom="opacity-0 -translate-y-full"
-              enterTo="opacity-100 translate-y-0"
-            >
-              <Link href="https://discord.com/users/283694054661816326">
-                <a
-                  target="_blank"
-                  aria-label="Link to developers discord account"
+                  <button
+                    data-text="Contact"
+                    className="h-10 hover:glitch  hover:after:glitchafter hover:before:glitchbefore cursor-pointer"
+                    onClick={() => clickHandler(positionNext)}
+                    aria-label="Link to my contact me part"
+                  >
+                    Contact
+                  </button>
+                </Transition.Child>
+              </li>
+              <li>
+                <Transition.Child
+                  appear={true}
+                  enter="transition-all delay-700 duration-75"
+                  enterFrom="opacity-0 -translate-y-full"
+                  enterTo="opacity-100 translate-y-0"
                 >
-                  <FaDiscord className="h-6 w-6 hover:fill-white cursor-pointer" />
-                </a>
-              </Link>
-            </Transition.Child>
+                  <Link href="https://github.com/StRane">
+                    <a
+                      target="_blank"
+                      aria-label="Link to developers Github page"
+                    >
+                      <DiGithubBadge className="h-6 w-6 hover:fill-white cursor-pointer" />
+                    </a>
+                  </Link>
+                </Transition.Child>
+              </li>
+              <li>
+                <Transition.Child
+                  appear={true}
+                  enter="transition-all delay-[900ms] duration-75"
+                  enterFrom="opacity-0 -translate-y-full"
+                  enterTo="opacity-100 translate-y-0"
+                >
+                  <Link href="https://discord.com/users/283694054661816326">
+                    <a
+                      target="_blank"
+                      aria-label="Link to developers discord account"
+                    >
+                      <FaDiscord className="h-6 w-6 hover:fill-white cursor-pointer" />
+                    </a>
+                  </Link>
+                </Transition.Child>
+              </li>
+            </ul>
           </Transition>
-        </ul>
+        </>
       </nav>
 
       <div

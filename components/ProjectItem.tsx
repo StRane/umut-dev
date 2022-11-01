@@ -14,12 +14,12 @@ function ProjectItem() {
     <>
       <div className="row translateOdd">
         <div className="z-20 relative space-y-6 md:top-0 md:left-0 md:space-y-8 lg:w-2/3">
-          <h4
-            className="text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
+          <h3
+            className="text-lg text-center w-full pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
             data-text="Netflix Clone"
           >
             Netflix Clone
-          </h4>
+          </h3>
           <div className="mx-12 md:mx-0 space-y-3 md:space-y-5 text-left">
             <p className="text-xs sm:text-sm md:text-base">
               A project i worked on to tackle Firebase OAuth and designed custom
@@ -74,12 +74,12 @@ function ProjectItem() {
       <div className="row translateEven">
         <div className="z-20 relative space-y-6 md:top-0 md:left-0 md:space-y-8 lg:w-2/3">
           {/* Put some dim color as a theme */}
-          <h4
-            className="text-shadow-row text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
+          <h3
+            className="text-shadow-row text-center w-full text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
             data-text="Chonburian"
           >
             Chonburian
-          </h4>
+          </h3>
           <div className="mx-12 md:mx-0 space-y-3 md:space-y-5 text-left">
             <p className="text-xs sm:text-sm md:text-base">
               I’ve practiced with react router and Mongo DB to post some events
@@ -112,12 +112,12 @@ function ProjectItem() {
       <div className="row translateOdd">
         <div className="z-20 relative space-y-6 md:top-0 md:left-0 md:space-y-8 lg:w-2/3">
           {/* Put some dim color as a theme */}
-          <h4
-            className="text-shadow-row text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
+          <h3
+            className="text-shadow-row text-center w-full text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
             data-text="Quotes"
           >
             Quotes
-          </h4>
+          </h3>
           <div className="mx-12 md:mx-0 space-y-3 md:space-y-5 text-left">
             <p className="text-xs sm:text-sm md:text-base">
               In this project I’ve practiced get and post requests. Dynamic list
@@ -167,12 +167,12 @@ function ProjectItem() {
       </div>
       <div className="row translateEven">
         <div className="z-20 relative space-y-6 md:top-0 md:left-0 md:space-y-8 lg:w-2/3">
-          <h4
-            className="text-shadow-row text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
+          <h3
+            className="text-shadow-row text-center w-full text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
             data-text="Food Order"
           >
             Food Order
-          </h4>
+          </h3>
           <div className="mx-12 md:mx-0 space-y-3 md:space-y-5 text-left">
             <p className="text-xs sm:text-sm md:text-base">
               In this project I worked on React Context to design shopping cart.

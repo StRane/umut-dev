@@ -19,12 +19,17 @@
   h3 {
     @apply text-left text-lg font-medium md:text-xl lg:text-2xl w-full lg:w-3/5 text-shadow-sm;
   }
+  h4 {
+    @apply text-left text-lg font-medium md:text-xl lg:text-2xl w-full lg:w-3/5 text-shadow-sm;
+  }
   p {
     @apply text-sm sm:text-base md:text-lg text-shadow-sm;
   }
 }
 
 @layer components {
+  .headingParam {
+  }
   .glitch {
     @apply animate-glitch-anim relative text-shadow-md;
   }
@@ -67,7 +72,7 @@
   .leftBarItem {
     @apply h-6 w-6 lg:w-7 lg:h-7 fill-green-matrix transition-transform hover:-translate-y-1 duration-150 inline-block mr-1 lg:mb-2 translate-x-0.5;
   }
-  .nextList{
+  .nextList {
     @apply border-2 m-5 border-green-mdark hover:bg-green-mdark hover:text-white transition-colors duration-200 ease-in align-middle;
   }
 }
