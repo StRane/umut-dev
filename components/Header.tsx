@@ -224,9 +224,14 @@ function Header({
           <HiArrowNarrowLeft className="h-6 w-6 lg:w-7 lg:h-7 fill-green-matrix transition-transform hover:-translate-x-1 duration-150 inline-block mr-1 lg:mr-2" />
         </button>
         <hr className="h-1 w-10 inline-block mr-1 lg:mr-2 border-green-matrix" />
-        <p className="text-sm lg:text-base text-green-matrix inline-block mr-1 lg:mr-2">
-          umut.seber@gmail.com
-        </p>
+        <Link href="mailto:umut.seber@gmail.com">
+          <a
+            aria-label="Mail to developer"
+            className="text-sm lg:text-base text-green-matrix inline-block mr-1 lg:mr-2"
+          >
+            umut.seber@gmail.com
+          </a>
+        </Link>
         <hr className="h-1 w-12 inline-block mr-1 lg:mr-2 border-green-matrix" />
       </div>
       <header className="h-[90vh] pt-40 md:pt-44 lg:pt-48 md:px-16 lg:px-44">

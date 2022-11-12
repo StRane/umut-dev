@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+import Image from "next/image";
+import Image1 from "../images/line.jpg";
+import { Disclosure } from "@headlessui/react";
+import { HiChevronDown } from "react-icons/hi/";
+
 function WhatsNext() {
   return (
     <div className="min-h-[90vh] space-y-4">
@@ -22,9 +27,41 @@ function WhatsNext() {
           </Link>
         </li>
         <li className="nextList">
-          <a className="before:content-[''] before:h-full before:inline-block before:align-middle align-middle block h-full">
+          <label
+            htmlFor="my-modal-4"
+            className="before:content-[''] before:h-full before:inline-block before:align-middle align-middle block h-full cursor-pointer"
+          >
             Line
-          </a>
+          </label>
+
+          <input type="checkbox" id="my-modal-4" className="modal-toggle" />
+          <label htmlFor="my-modal-4" className="modal cursor-pointer">
+            <label className="modal-box relative" htmlFor="">
+              <Image
+                src={Image1.src}
+                alt="https://line.me/ti/p/-C3OoTrXVN"
+                height={300}
+                width={300}
+              />
+              <Disclosure>
+                {({ open }) => (
+                  <>
+                    <Disclosure.Button className="w-full text-center">
+                      <span>Line Link</span>
+                      <HiChevronDown
+                        className={`${
+                          open ? "rotate-180 transform inline-block" : "inline-block"
+                        } h-5 w-5`}
+                      />
+                    </Disclosure.Button>
+                    <Disclosure.Panel className="text-sm">
+                      https://line.me/ti/p/-C3OoTrXVN
+                    </Disclosure.Panel>
+                  </>
+                )}
+              </Disclosure>
+            </label>
+          </label>
         </li>
         <li className="nextList">
           <Link href="mailto:umut.seber@gmail.com">
