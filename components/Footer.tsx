@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <div className="grid grid-cols-3 md:px-24 xl:px-28  text-center text-white bg-green-mdark m-0 w-full">
+    <div className="grid grid-cols-1 md:grid-cols-3 px-5 md:px-24 xl:px-28  text-center text-white bg-green-mdark m-0 w-full">
       <div className="pb-5">
         <p className="pb-3 pt-5 text-shadow-footer">Social</p>
         <div className="flex flex-col justify-center space-y-3 text-sm">
@@ -46,8 +46,8 @@ function Footer() {
         </div>
       </div>
       <div>
-        <p className="pb-3 pt-5 text-shadow-footer text-left">Contact</p>
-        <div className="flex flex-col space-y-5 pb-5 items-start text-sm">
+        <p className="pb-3 pt-5 text-shadow-footer md:text-left">Contact</p>
+        <div className="flex flex-col space-y-5 pb-5 sm:items-center md:items-start text-sm">
           <div>Phone: +66 929 390 362</div>
           <div>
             <button className="inline-block">
@@ -76,7 +76,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="pt-5 pb-5 text-left ">
+      <div className="pt-5 pb-5 sm:text-center md:text-left ">
         <Link href="https://github.com/StRane/umut-dev">
           <a target="_blank" className="group">
             <p className="pb-3 text-shadow-footer group-hover:text-black group-hover:text-shadow-md transition-colors duration-200 ease-in">
