@@ -4,7 +4,7 @@ import styles from "./Header.module.scss";
 import Typewriter from "typewriter-effect";
 import { Transition } from "@headlessui/react";
 import { DiGithubBadge, DiTerminal } from "react-icons/di";
-import { FaDiscord, FaLinkedin, FaLine, FaMailBulk } from "react-icons/fa";
+import { FaLinkedin, FaLine, FaMailBulk } from "react-icons/fa";
 import { HiArrowNarrowLeft, HiArrowNarrowUp } from "react-icons/hi";
 import Link from "next/link";
 
@@ -12,6 +12,7 @@ interface Props {
   positionAbout: number;
   positionProject: number;
   positionNext: number;
+  footPosition: boolean;
   showing: boolean;
 }
 
@@ -20,6 +21,7 @@ function Header({
   positionProject,
   positionNext,
   showing,
+  footPosition,
 }: Props) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDownAlot, setIsDownAlot] = useState(false);
@@ -32,12 +34,17 @@ function Header({
     });
   };
 
+  console.log(footPosition);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setIsScrolled(true);
         if (window.scrollY > 500) {
           setIsDownAlot(true);
+          if (footPosition) {
+            setIsDownAlot(false);
+          }
         } else {
           setIsDownAlot(false);
         }
@@ -51,7 +58,7 @@ function Header({
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [footPosition]);
 
   return (
     <>
@@ -105,7 +112,7 @@ function Header({
                 >
                   <button
                     data-text="Work"
-                    className="h-10 hover:glitch  hover:after:glitchafter hover:before:glitchbefore cursor-pointer"
+                    className="h-10 hover:glitch hover:after:glitchafter hover:before:glitchbefore cursor-pointer"
                     onClick={() => clickHandler(positionProject)}
                     aria-label="Link to my projects"
                   >
@@ -133,7 +140,30 @@ function Header({
               <li>
                 <Transition.Child
                   appear={true}
-                  enter="transition-all delay-700 duration-75"
+                  enter="transition-all delay-[700ms] duration-75"
+                  enterFrom="opacity-0 -translate-y-full"
+                  enterTo="opacity-100 translate-y-0"
+                >
+                  <button
+                    data-text="My Resume"
+                    className="h-10 hover:glitch hover:after:glitchafter hover:before:glitchbefore cursor-pointer"
+                  >
+                    <Link href="../docs/resume/U.Seber_resume.pdf">
+                      <a
+                        target="_blank"
+                        aria-label="Link to developers resume"
+                        download
+                      >
+                        My Resume
+                      </a>
+                    </Link>
+                  </button>
+                </Transition.Child>
+              </li>
+              <li>
+                <Transition.Child
+                  appear={true}
+                  enter="transition-all delay-[900ms] duration-75"
                   enterFrom="opacity-0 -translate-y-full"
                   enterTo="opacity-100 translate-y-0"
                 >
@@ -150,18 +180,13 @@ function Header({
               <li>
                 <Transition.Child
                   appear={true}
-                  enter="transition-all delay-[900ms] duration-75"
+                  enter="transition-all delay-[1100ms] duration-75"
                   enterFrom="opacity-0 -translate-y-full"
                   enterTo="opacity-100 translate-y-0"
                 >
-                  <Link href="https://discord.com/users/283694054661816326">
-                    <a
-                      target="_blank"
-                      aria-label="Link to developers discord account"
-                    >
-                      <FaDiscord className="h-6 w-6 hover:fill-white cursor-pointer" />
-                    </a>
-                  </Link>
+                  <label htmlFor="my-modal-4">
+                    <FaLine className="h-6 w-6 hover:fill-white cursor-pointer" />
+                  </label>
                 </Transition.Child>
               </li>
             </ul>
@@ -198,9 +223,9 @@ function Header({
           </a>
         </Link>
 
-        <a>
-          <FaLine className="leftBarItem" />
-        </a>
+        <label htmlFor="my-modal-4">
+          <FaLine className="leftBarItem cursor-pointer" />
+        </label>
 
         <Link href="mailto:umut.seber@gmail.com">
           <a aria-label="Mail to developer">
@@ -227,7 +252,7 @@ function Header({
         <Link href="mailto:umut.seber@gmail.com">
           <a
             aria-label="Mail to developer"
-            className="text-sm lg:text-base text-green-matrix inline-block mr-1 lg:mr-2"
+            className="text-sm lg:text-base text-green-matrix inline-block mr-1 lg:mr-2 hover:-translate-x-0.5 transition-transform duration-200 ease-in"
           >
             umut.seber@gmail.com
           </a>

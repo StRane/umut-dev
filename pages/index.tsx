@@ -2,23 +2,32 @@ import type { NextPage } from "next";
 import React from "react";
 import Head from "next/head";
 import { useRef, useEffect, useState } from "react";
+import { useIntersectionObserver } from 'usehooks-ts'
 import AboutMe from "../components/AboutMe";
 import Header from "../components/Header";
 import Projects from "../components/Projects";
 import WhatsNext from "../components/WhatsNext";
 import Footer from '../components/Footer';
 
-
 const Home: NextPage = () => {
-  const aboutRef = useRef<HTMLInputElement>(null);
-  const projectsRef = useRef<HTMLInputElement>(null);
-  const nextRef = useRef<HTMLInputElement>(null);
+  const aboutRef = useRef<HTMLInputElement | null>(null);
+  const projectsRef = useRef<HTMLInputElement | null>(null);
+  const nextRef = useRef<HTMLInputElement | null>(null);
+  const footRef = useRef<HTMLInputElement | null>(null);
 
   const [initializing, setInitializing] = useState(true);
 
   const [aboutPosition, setAboutPosition] = useState(0);
   const [projectsPosition, setProjectsPosition] = useState(0);
   const [nextPosition, setNextPosition] = useState(0);
+  
+
+
+  const entry = useIntersectionObserver(footRef,{});
+  
+  const isVisible = !!entry?.isIntersecting;
+ 
+ 
 
   useEffect(() => {
     setAboutPosition(aboutRef.current!.getBoundingClientRect().y);
@@ -26,6 +35,7 @@ const Home: NextPage = () => {
     setNextPosition(nextRef.current!.getBoundingClientRect().y);
     setInterval(()=>setInitializing(false),1000)  
   }, []);
+
 
 
   return (
@@ -51,6 +61,7 @@ const Home: NextPage = () => {
               positionAbout={aboutPosition}
               positionProject={projectsPosition}
               positionNext={nextPosition}
+              footPosition={isVisible}
               showing= {initializing}
             />
             <section ref={aboutRef}>
@@ -64,7 +75,7 @@ const Home: NextPage = () => {
             </section>
           </main>
 
-          <footer className="flex w-full items-center justify-center">
+          <footer ref={footRef} className="flex w-screen -translate-x-10 items-center justify-center">
             <Footer />
           </footer>
 

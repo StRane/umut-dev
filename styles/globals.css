@@ -39,6 +39,21 @@
   .glitchafter {
     @apply content-[attr(data-text)] absolute left-0 w-full animate-glitch-bot clip-effect2;
   }
+
+/* Footer style */
+
+  .glitchFoot {
+    @apply animate-glitch-anim relative text-shadow-mdf;
+  }
+  .glitchbeforeFoot {
+    @apply content-[attr(data-text)] absolute left-0 w-full animate-glitch-top clip-effect;
+  }
+  .glitchafterFoot {
+    @apply content-[attr(data-text)] absolute left-0 w-full animate-glitch-bot clip-effect2;
+  }
+
+
+
   .listhover {
     @apply transition -translate-y-0.5 text-shadow-md duration-300 ease-in;
   }
@@ -85,3 +100,7 @@
     clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
   }
 }
+
+
+
+

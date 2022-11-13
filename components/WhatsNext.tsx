@@ -6,6 +6,10 @@ import { Disclosure } from "@headlessui/react";
 import { HiChevronDown } from "react-icons/hi/";
 
 function WhatsNext() {
+  function linkCopy() {
+    navigator.clipboard.writeText("https://line.me/ti/p/-C3OoTrXVN");
+    alert("Link Copied!");
+  }
   return (
     <div className="min-h-[90vh] space-y-4">
       <h2 className="pt-40 pb-10 md:pt-20">
@@ -14,7 +18,8 @@ function WhatsNext() {
       </h2>
       <p>I am looking forward to hearing from you.</p>
       <p>Whether you have a question or just want to say hi,</p>
-      <p className="pb-10">I’ll try my best to get back to you!</p>
+      <p>I’ll try my best to get back to you!</p>
+      <p className="pb-10">My most used profiles...</p>
       <ul className="grid grid-cols-1 md:grid-cols-3 grid-rows-[6rem_6rem_6rem] mx-0 lg:grid-rows-[6rem]  xl:mx-56 place-content-center">
         <li className="nextList">
           <Link href="https://www.linkedin.com/in/umut-%C5%9Feber-5519b2183/">
@@ -50,12 +55,17 @@ function WhatsNext() {
                       <span>Line Link</span>
                       <HiChevronDown
                         className={`${
-                          open ? "rotate-180 transform inline-block" : "inline-block"
+                          open
+                            ? "rotate-180 transform inline-block"
+                            : "inline-block"
                         } h-5 w-5`}
                       />
                     </Disclosure.Button>
                     <Disclosure.Panel className="text-sm">
-                      https://line.me/ti/p/-C3OoTrXVN
+                      ID: umut_dev
+                      <div onClick={() => linkCopy()}>
+                        https://line.me/ti/p/-C3OoTrXVN
+                      </div>
                     </Disclosure.Panel>
                   </>
                 )}
@@ -66,7 +76,7 @@ function WhatsNext() {
         <li className="nextList">
           <Link href="mailto:umut.seber@gmail.com">
             <a className="before:content-[''] before:h-full before:inline-block before:align-middle align-middle block h-full">
-              E-Mail
+              Say Hello
             </a>
           </Link>
         </li>
