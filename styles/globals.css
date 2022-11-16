@@ -81,7 +81,7 @@
     @apply md:-translate-x-10 lg:-translate-x-12 xl:-translate-x-32;
   }
   .rowPic {
-    @apply min-h-[175px] md:min-h-[200px]  lg:min-h-[225px] md:h-1/2 md:my-auto md:w-4/5 hidden md:inline-block xl:w-1/2 relative rounded-sm overflow-clip;
+    @apply min-h-[175px] md:min-h-[200px] lg:min-h-[225px] md:h-1/2 md:my-auto md:w-4/5 hidden md:inline-block xl:w-1/2 relative rounded-sm overflow-clip;
   }
 
   .leftBarItem {

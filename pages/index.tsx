@@ -2,12 +2,12 @@ import type { NextPage } from "next";
 import React from "react";
 import Head from "next/head";
 import { useRef, useEffect, useState } from "react";
-import { useIntersectionObserver } from 'usehooks-ts'
+import { useIntersectionObserver } from "usehooks-ts";
 import AboutMe from "../components/AboutMe";
 import Header from "../components/Header";
 import Projects from "../components/Projects";
 import WhatsNext from "../components/WhatsNext";
-import Footer from '../components/Footer';
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   const aboutRef = useRef<HTMLInputElement | null>(null);
@@ -20,23 +20,17 @@ const Home: NextPage = () => {
   const [aboutPosition, setAboutPosition] = useState(0);
   const [projectsPosition, setProjectsPosition] = useState(0);
   const [nextPosition, setNextPosition] = useState(0);
-  
 
+  const entry = useIntersectionObserver(footRef, {});
 
-  const entry = useIntersectionObserver(footRef,{});
-  
   const isVisible = !!entry?.isIntersecting;
- 
- 
 
   useEffect(() => {
     setAboutPosition(aboutRef.current!.getBoundingClientRect().y);
     setProjectsPosition(projectsRef.current!.getBoundingClientRect().y);
     setNextPosition(nextRef.current!.getBoundingClientRect().y);
-    setInterval(()=>setInitializing(false),1000)  
+    setInterval(() => setInitializing(false), 1000);
   }, []);
-
-
 
   return (
     <div className="relative">
@@ -56,29 +50,31 @@ const Home: NextPage = () => {
         <meta name="theme-color" content="dark" />
       </Head>
 
-          <main className="flex w-full flex-col text-center">
-            <Header
-              positionAbout={aboutPosition}
-              positionProject={projectsPosition}
-              positionNext={nextPosition}
-              footPosition={isVisible}
-              showing= {initializing}
-            />
-            <section ref={aboutRef}>
-              <AboutMe />
-            </section>
-            <section ref={projectsRef}>
-              <Projects />
-            </section>
-            <section ref={nextRef}>
-              <WhatsNext />
-            </section>
-          </main>
+      <main className="flex w-full flex-col text-center">
+        <Header
+          showing={initializing}
+          positionAbout={aboutPosition}
+          positionProject={projectsPosition}
+          positionNext={nextPosition}
+          footPosition={isVisible}
+        />
+        <section ref={aboutRef}>
+          <AboutMe />
+        </section>
+        <section ref={projectsRef}>
+          <Projects />
+        </section>
+        <section ref={nextRef}>
+          <WhatsNext />
+        </section>
+      </main>
 
-          <footer ref={footRef} className="flex w-screen -translate-x-10 items-center justify-center">
-            <Footer />
-          </footer>
-
+      <footer
+        ref={footRef}
+        className="flex w-screen -translate-x-10 items-center justify-center"
+      >
+        <Footer isVisible={isVisible}/>
+      </footer>
     </div>
   );
 };

@@ -34,7 +34,6 @@ function Header({
     });
   };
 
-  console.log(footPosition);
 
   useEffect(() => {
     const handleScroll = () => {

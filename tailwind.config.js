@@ -22,11 +22,14 @@ module.exports = {
       row: "0 0px 0px #fff",
     },
     extend: {
+      spacing: {
+        "1/5": "20%",
+      },
       colors: {
         green: {
           matrix: "#1ed934",
-          mdark: '#008F11',
-          mlight: '#00FF41'
+          mdark: "#008F11",
+          mlight: "#00FF41",
         },
       },
       dropShadow: {
@@ -73,13 +76,60 @@ module.exports = {
             transform: "translate(-22px,5px) skew(21deg)",
           },
         },
+        flipInX: {
+          "0%": {
+            transform: "perspective(400px) rotate3d(1, 0, 0, 90deg)",
+          },
+          "40%": {
+            transform: "perspective(400px) rotate3d(1, 0, 0, -20deg)",
+          },
+          "60%": {
+            transform: "perspective(400px) rotate3d(1, 0, 0, 10deg)",
+          },
+          "80%": {
+            transform: "perspective(400px) rotate3d(1, 0, 0, -5deg)",
+          },
+          "100%": {
+            transform: "perspective(400px)",
+          },
+        },
+        zoomIn: {
+          "0%": {
+            opacity: "0",
+            transform: "scale3d(0.3, 0.3, 0.3)",
+          },
+          "50%": {
+            opacity: "1",
+          },
+        },
+        swing: {
+          "20%": {
+            transform: "rotate3d(0, 0, 1, 15deg)",
+          },
+
+          "40%": {
+            transform: "rotate3d(0, 0, 1, -10deg)",
+          },
+
+          "60%": {
+            transform: "rotate3d(0, 0, 1, 5deg)",
+          },
+          "80%": {
+            transform: "rotate3d(0, 0, 1, -5deg)",
+          },
+          "100%": {
+            transform: "rotate3d(0, 0, 1, 0deg)",
+          },
+        },
       },
 
       animation: {
         "glitch-anim": "glitch 1s linear infinite",
         "glitch-top": "glitchTop 1s linear infinite",
         "glitch-bot": "glitchBotom 1.5s linear infinite",
+        flipIN: "flipInX 2s ease-in 1",
         appearBar: "appear 2s ease-in 1",
+        swinging: "swing 2s ease-in 1"
       },
     },
   },
