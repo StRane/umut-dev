@@ -21,7 +21,7 @@ function WhatsNext() {
   }
   return (
     <div className="min-h-screen space-y-4 lg:mx-28" ref={intersectionRef}>
-      <Transition show={true} appear={isNextVisible}>
+      <Transition show={isNextVisible}>
       <Transition.Child
           appear={true}
           enter="transition-all flex-1"
