@@ -5,9 +5,9 @@ import { useRef, useEffect, useState } from "react";
 import { useIntersectionObserver } from "usehooks-ts";
 import AboutMe from "../components/AboutMe";
 import Header from "../components/Header";
-import Projects from "../components/Projects";
 import WhatsNext from "../components/WhatsNext";
 import Footer from "../components/Footer";
+import Projects from "../components/Projects";
 
 const Home: NextPage = () => {
   const aboutRef = useRef<HTMLInputElement | null>(null);
@@ -22,8 +22,10 @@ const Home: NextPage = () => {
   const [nextPosition, setNextPosition] = useState(0);
 
   const entry = useIntersectionObserver(footRef, {});
+  const entryNext = useIntersectionObserver(nextRef, {});
 
   const isVisible = !!entry?.isIntersecting;
+  const isNextVisible = !!entryNext?.isIntersecting;
 
   useEffect(() => {
     setAboutPosition(aboutRef.current!.getBoundingClientRect().y);
@@ -59,13 +61,13 @@ const Home: NextPage = () => {
           footPosition={isVisible}
         />
         <section ref={aboutRef}>
-          <AboutMe />
+          <AboutMe position={aboutPosition} />
         </section>
         <section ref={projectsRef}>
-          <Projects />
+          <Projects position={projectsPosition} />
         </section>
         <section ref={nextRef}>
-          <WhatsNext />
+          <WhatsNext/>
         </section>
       </main>
 
@@ -73,7 +75,7 @@ const Home: NextPage = () => {
         ref={footRef}
         className="flex w-screen -translate-x-10 items-center justify-center"
       >
-        <Footer isVisible={isVisible}/>
+        <Footer isVisible={isVisible} />
       </footer>
     </div>
   );

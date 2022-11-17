@@ -2,22 +2,43 @@ import Image from "next/image";
 
 import { Transition } from "@headlessui/react";
 
-import { useRef } from "react";
+import { useRef,useEffect,useState } from "react";
 import { useIntersectionObserver } from "usehooks-ts";
 
 import ProfilePic from "../images/1636693859327.jpg";
 
-function AboutMe() {
-  const intersectionRef = useRef<HTMLInputElement | null>(null);
-  const entryAbout = useIntersectionObserver(intersectionRef, {});
-  const isAboutVisible = !!entryAbout?.isIntersecting;
+interface Props{
+  position:number;
+}
+
+function AboutMe({position}:Props) {
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    let fix = window.screen.height/2;
+    const handleScroll = () => {
+        if (window.scrollY > (position-fix)) {
+          setIsScrolled(true);
+        } else {
+          setIsScrolled(false);
+        }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [position]);
+
 
   return (
-    <div className="min-h-screen lg:mx-28" ref={intersectionRef}>
-      <Transition show={isAboutVisible}>
+    <div className="min-h-screen lg:mx-28">
+      <Transition show={isScrolled}>
         <Transition.Child
           appear={true}
-          enter="transition-all delay-300 flex-1"
+          enter="transition-all flex-1"
           enterFrom="opacity-0 flex-1"
           enterTo="animate-flipIN opacity-100 flex-1"
         >
