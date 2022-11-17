@@ -22,7 +22,6 @@ const Home: NextPage = () => {
   const [nextPosition, setNextPosition] = useState(0);
 
   const entry = useIntersectionObserver(footRef, {});
-  const entryNext = useIntersectionObserver(nextRef, {});
 
   const isVisible = !!entry?.isIntersecting;
 
@@ -66,7 +65,7 @@ const Home: NextPage = () => {
           <Projects position={projectsPosition} />
         </section>
         <section ref={nextRef}>
-          <WhatsNext/>
+          <WhatsNext />
         </section>
       </main>
 

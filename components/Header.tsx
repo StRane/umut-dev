@@ -34,6 +34,8 @@ function Header({
     });
   };
 
+  
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -56,7 +58,7 @@ function Header({
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [footPosition]);
+  }, [footPosition, positionNext]);
 
   return (
     <>
