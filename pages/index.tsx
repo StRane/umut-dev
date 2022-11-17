@@ -25,7 +25,6 @@ const Home: NextPage = () => {
   const entryNext = useIntersectionObserver(nextRef, {});
 
   const isVisible = !!entry?.isIntersecting;
-  const isNextVisible = !!entryNext?.isIntersecting;
 
   useEffect(() => {
     setAboutPosition(aboutRef.current!.getBoundingClientRect().y);

@@ -39,8 +39,8 @@ function Projects({ position }: Props) {
   }, [position]);
 
   return (
-    <div className="lg:mx-28 min-h-[150vh]">
-      <Transition show={true} appear={isScrolled}>
+    <div className="lg:mx-28 min-h-[250vh]">
+      <Transition show={isScrolled}>
         <Transition.Child
           appear={true}
           enter="transition-all flex-1"
@@ -50,11 +50,11 @@ function Projects({ position }: Props) {
           <h2 className="pt-20 pb-10 md:pt-20">Projects</h2>
         </Transition.Child>
         <hr className="w-full h-[1px] border-green-mdark -translate-y-8" />
-        <div className="min-h-[150vh]">
+        <div className="min-h-[220vh]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 sm:gap-y-12 lg:gap-y-20 pt-10">
             <Transition.Child
               appear={true}
-              enter="transition-all delay-300 flex-1"
+              enter="transition-all delay-300 duration-500 flex-1"
               enterFrom="opacity-0 -translate-x-1/4 flex-1 z-20"
               enterTo="opacity-100 translate-x-0 lg:-translate-x-6 flex-1 z-20"
             >
@@ -108,7 +108,7 @@ function Projects({ position }: Props) {
             </Transition.Child>
             <Transition.Child
               appear={true}
-              enter="transition-all delay-300 flex-1"
+              enter="transition-all delay-300 duration-500 flex-1"
               enterFrom="opacity-0 translate-x-0 flex-1"
               enterTo="opacity-100 -translate-x-1/5 flex-1"
             >
@@ -124,7 +124,7 @@ function Projects({ position }: Props) {
             </Transition.Child>
             <Transition.Child
               appear={true}
-              enter="transition-all delay-500 flex-1"
+              enter="transition-all delay-500 duration-500 flex-1"
               enterFrom="opacity-0 translate-x-0 flex-1 z-20"
               enterTo="opacity-100 translate-x-1/4 flex-1 z-20"
             >
@@ -140,7 +140,7 @@ function Projects({ position }: Props) {
             </Transition.Child>
             <Transition.Child
               appear={true}
-              enter="transition-all delay-500 flex-1"
+              enter="transition-all delay-500 duration-500 flex-1"
               enterFrom="opacity-0 translate-x-1/4 flex-1 z-20 "
               enterTo="opacity-100 translate-x-0 lg:translate-x-6 flex-1 z-20 "
             >
@@ -188,7 +188,7 @@ function Projects({ position }: Props) {
             </Transition.Child>
             <Transition.Child
               appear={true}
-              enter="transition-all delay-700 flex-1"
+              enter="transition-all delay-700 duration-500 flex-1"
               enterFrom="opacity-0 -translate-x-1/4 flex-1 z-20"
               enterTo="opacity-100 translate-x-0 lg:-translate-x-6 flex-1 z-20"
             >
@@ -236,7 +236,7 @@ function Projects({ position }: Props) {
             </Transition.Child>
             <Transition.Child
               appear={true}
-              enter="transition-all delay-700 flex-1"
+              enter="transition-all delay-700 duration-500 flex-1"
               enterFrom="opacity-0 translate-x-0 flex-1"
               enterTo="opacity-100 -translate-x-1/5 flex-1"
             >
@@ -252,7 +252,7 @@ function Projects({ position }: Props) {
             </Transition.Child>
             <Transition.Child
               appear={true}
-              enter="transition-all delay-[900ms] flex-1"
+              enter="transition-all delay-[900ms] duration-500 flex-1"
               enterFrom="opacity-0 translate-x-0 flex-1 z-20"
               enterTo="opacity-100 translate-x-1/4 flex-1 z-20"
             >
@@ -268,7 +268,7 @@ function Projects({ position }: Props) {
             </Transition.Child>
             <Transition.Child
               appear={true}
-              enter="transition-all delay-[900ms] flex-1"
+              enter="transition-all delay-[900ms] duration-500 flex-1"
               enterFrom="opacity-0 translate-x-1/4 flex-1 z-20"
               enterTo="opacity-100 translate-x-0 lg:translate-x-6 flex-1 z-20"
             >
