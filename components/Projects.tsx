@@ -39,8 +39,8 @@ function Projects({ position }: Props) {
   }, [position]);
 
   return (
-    <div className="lg:mx-28">
-      <Transition show={isScrolled}>
+    <div className="lg:mx-28 min-h-[150vh]">
+      <Transition show={true} appear={isScrolled}>
         <Transition.Child
           appear={true}
           enter="transition-all flex-1"

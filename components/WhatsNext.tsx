@@ -20,8 +20,8 @@ function WhatsNext() {
     alert("Link Copied!");
   }
   return (
-    <div className="min-h-[90vh] space-y-4 lg:mx-28" ref={intersectionRef}>
-      <Transition show={isNextVisible}>
+    <div className="min-h-screen space-y-4 lg:mx-28" ref={intersectionRef}>
+      <Transition show={true} appear={isNextVisible}>
       <Transition.Child
           appear={true}
           enter="transition-all flex-1"
@@ -143,7 +143,7 @@ function WhatsNext() {
           >
             <Link href="mailto:umut.seber@gmail.com">
               <a className="before:content-[''] before:h-full before:inline-block before:align-middle align-middle block h-full">
-                Say Hello
+                E-mail
               </a>
             </Link>
           </Transition.Child>

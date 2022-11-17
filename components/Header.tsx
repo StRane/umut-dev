@@ -34,7 +34,6 @@ function Header({
     });
   };
 
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -148,10 +147,7 @@ function Header({
                     className="h-10 hover:glitch hover:after:glitchafter hover:before:glitchbefore cursor-pointer"
                   >
                     <Link href="https://drive.google.com/file/d/1f0GVAvPKr1gGJhOdvsTLDy_dfNbgkfTO/view?usp=share_link">
-                      <a
-                        target="_blank"
-                        aria-label="Link to developers resume"
-                      >
+                      <a target="_blank" aria-label="Link to developers resume">
                         My Resume
                       </a>
                     </Link>

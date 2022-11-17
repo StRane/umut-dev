@@ -8,7 +8,7 @@ interface Props {
 function Footer({ isVisible }: Props) {
   return (
     <div className="w-full">
-      <Transition show={isVisible}>
+      <Transition show={true}>
         <div className="grid grid-cols-1 md:grid-cols-3 px-5 md:px-24 xl:px-28  text-center text-white bg-green-mdark m-0 w-full">
           <div className="pb-5">
             <p className="pb-3 pt-5 text-shadow-footer">Social</p>

@@ -33,11 +33,11 @@ function AboutMe({ position }: Props) {
 
   return (
     <div className="min-h-screen lg:mx-28">
-      <Transition show={isScrolled}>
+      <Transition show={true} appear={isScrolled}>
         <Transition.Child
           appear={true}
-          enter="transition-all flex-1"
-          enterFrom="opacity-0 flex-1"
+          enter="transition-all opacity-0 flex-1"
+          enterFrom=" flex-1"
           enterTo="animate-flipIN opacity-100 flex-1"
         >
           <h2 className="pt-20 pb-10 md:pt-20">AboutMe</h2>
