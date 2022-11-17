@@ -30,7 +30,7 @@ function WhatsNext() {
         >
           <h2 className="pt-40 pb-10 md:pt-20">Contact</h2>
         </Transition.Child>
-        <hr className="w-full h-[1px] border-green-mdark " />
+        <hr className="w-full h-[1px] border-green-mdark -translate-y-10" />
 
         <Transition.Child
           as="p"
