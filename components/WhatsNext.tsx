@@ -22,9 +22,15 @@ function WhatsNext() {
   return (
     <div className="min-h-[90vh] space-y-4 lg:mx-28" ref={intersectionRef}>
       <Transition show={isNextVisible}>
-        <h2 className="pt-40 pb-10 md:pt-20">Contact</h2>
-
-        <hr className="w-full h-[1px] border-green-mdark -translate-y-10" />
+      <Transition.Child
+          appear={true}
+          enter="transition-all flex-1"
+          enterFrom="opacity-0 flex-1"
+          enterTo="animate-flipIN opacity-100 flex-1"
+        >
+          <h2 className="pt-40 pb-10 md:pt-20">Contact</h2>
+        </Transition.Child>
+        <hr className="w-full h-[1px] border-green-mdark " />
 
         <Transition.Child
           as="p"

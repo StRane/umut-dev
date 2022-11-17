@@ -24,7 +24,7 @@ function Projects({ position }: Props) {
   useEffect(() => {
     let fix = window.screen.height;
     const handleScroll = () => {
-      if (window.scrollY > position -( fix * 10/11)) {
+      if (window.scrollY > position - (fix *10/11)) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);

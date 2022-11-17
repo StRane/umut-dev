@@ -2,27 +2,26 @@ import Image from "next/image";
 
 import { Transition } from "@headlessui/react";
 
-import { useRef,useEffect,useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useIntersectionObserver } from "usehooks-ts";
 
 import ProfilePic from "../images/1636693859327.jpg";
 
-interface Props{
-  position:number;
+interface Props {
+  position: number;
 }
 
-function AboutMe({position}:Props) {
-
+function AboutMe({ position }: Props) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    let fix = window.screen.height/2;
+    let fix = window.screen.height / 2;
     const handleScroll = () => {
-        if (window.scrollY > (position-fix)) {
-          setIsScrolled(true);
-        } else {
-          setIsScrolled(false);
-        }
+      if (window.scrollY > position - fix) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -32,13 +31,17 @@ function AboutMe({position}:Props) {
     };
   }, [position]);
 
-
   return (
     <div className="min-h-screen lg:mx-28">
       <Transition show={isScrolled}>
-        
+        <Transition.Child
+          appear={true}
+          enter="transition-all flex-1"
+          enterFrom="opacity-0 flex-1"
+          enterTo="animate-flipIN opacity-100 flex-1"
+        >
           <h2 className="pt-20 pb-10 md:pt-20">AboutMe</h2>
-        
+        </Transition.Child>
         <hr className="w-full h-[1px] border-green-mdark -translate-y-10" />
 
         <div className="flex flex-col-reverse md:flex-row">
