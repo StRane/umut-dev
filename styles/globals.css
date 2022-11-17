@@ -72,7 +72,7 @@
     @apply h-5 w-5 sm:h-7 sm:w-7 transition cursor-pointer duration-300 hover:fill-white;
   }
   .row {
-    @apply min-h-[250px] w-full mx-auto sm:w-4/5 relative block rounded-lg overflow-clip md:w-full xl:w-3/4 md:z-20;
+    @apply w-full mx-auto sm:w-4/5 relative block rounded-lg overflow-clip md:w-full xl:w-3/4 md:z-20;
   }
   .translateOdd {
     @apply md:translate-x-28 lg:translate-x-52 xl:translate-x-[19rem];

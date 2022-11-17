@@ -11,8 +11,7 @@ import Link from "next/link";
 
 import { Transition } from "@headlessui/react";
 
-import { useRef, useEffect, useState } from "react";
-import { useIntersectionObserver } from "usehooks-ts";
+import { useEffect, useState } from "react";
 
 interface Props {
   position: number;
@@ -24,7 +23,7 @@ function Projects({ position }: Props) {
   useEffect(() => {
     let fix = window.screen.height;
     const handleScroll = () => {
-      if (window.scrollY > position - (fix *10/11)) {
+      if (window.scrollY > position - (fix * 10) / 11) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -50,7 +49,7 @@ function Projects({ position }: Props) {
           <h2 className="pt-20 pb-10 md:pt-20">Projects</h2>
         </Transition.Child>
         <hr className="w-full h-[1px] border-green-mdark -translate-y-8" />
-        <div className="min-h-[220vh] xl:min-h-[170vh]">
+        <div className="min-h-[220vh] lg:min-h-[170vh]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 sm:gap-y-12 lg:gap-y-20 pt-10">
             <Transition.Child
               appear={true}
@@ -58,7 +57,7 @@ function Projects({ position }: Props) {
               enterFrom="opacity-0 -translate-x-1/4 flex-1 z-20"
               enterTo="opacity-100 translate-x-0 lg:-translate-x-6 flex-1 z-20"
             >
-              <div className="row translateOdd">
+              <div className="row translateOdd pb-8">
                 <div className="relative space-y-6 md:top-0 md:left-0 md:space-y-8 lg:w-2/3">
                   <h3
                     className="text-lg text-center w-full pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
@@ -76,24 +75,6 @@ function Projects({ position }: Props) {
                       <p className="text-xs sm:text-sm md:text-base">
                         NextJS Typescript MUI Firebase API Vercel
                       </p>
-                      <div className="flex">
-                        <Link href="https://github.com/StRane/netflix-clone-tsx-tailwind-next">
-                          <a
-                            target="_blank"
-                            aria-label="Link to project Netflix clone Github repo"
-                          >
-                            <DiGithubBadge className="projectIcon" />
-                          </a>
-                        </Link>
-                        <Link href="https://netflix-clone-tsx-tailwind-next.vercel.app/">
-                          <a
-                            target="_blank"
-                            aria-label="Link to project Netflix clone webpage"
-                          >
-                            <HiExternalLink className="projectIcon" />
-                          </a>
-                        </Link>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -104,6 +85,24 @@ function Projects({ position }: Props) {
                   layout="fill"
                   placeholder="blur"
                 />
+              </div>
+              <div className="flex row translateOdd mx-10 md:mx-0 xl:mx-[4.5rem] text-left -translate-y-8">
+                <Link href="https://github.com/StRane/netflix-clone-tsx-tailwind-next">
+                  <a
+                    target="_blank"
+                    aria-label="Link to project Netflix clone Github repo"
+                  >
+                    <DiGithubBadge className="projectIcon" />
+                  </a>
+                </Link>
+                <Link href="https://netflix-clone-tsx-tailwind-next.vercel.app/">
+                  <a
+                    target="_blank"
+                    aria-label="Link to project Netflix clone webpage"
+                  >
+                    <HiExternalLink className="projectIcon" />
+                  </a>
+                </Link>
               </div>
             </Transition.Child>
             <Transition.Child
@@ -144,7 +143,7 @@ function Projects({ position }: Props) {
               enterFrom="opacity-0 translate-x-1/4 flex-1 z-20 "
               enterTo="opacity-100 translate-x-0 lg:translate-x-6 flex-1 z-20 "
             >
-              <div className="row translateEven">
+              <div className="row translateEven pb-8">
                 <div className="relative space-y-6 md:top-0 md:left-0 md:space-y-8 lg:w-2/3">
                   {/* Put some dim color as a theme */}
                   <h3
@@ -163,17 +162,6 @@ function Projects({ position }: Props) {
                       <p className="text-xs sm:text-sm md:text-base">
                         React Router CSS MongoDB API
                       </p>
-                      <div className="flex">
-                        <DiGithubBadge className="projectIcon" />
-                        <Link href="https://next-js-course-demo-chon-burian.vercel.app/">
-                          <a
-                            target="_blank"
-                            aria-label="Link to project Chonburian webpage"
-                          >
-                            <HiExternalLink className="projectIcon" />
-                          </a>
-                        </Link>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -184,6 +172,24 @@ function Projects({ position }: Props) {
                   layout="fill"
                   placeholder="blur"
                 />
+              </div>
+              <div className="flex row mx-10 md:mx-0 -translate-y-8 md:-translate-x-10 lg:-translate-x-12 xl:-translate-x-[3.5rem]">
+                <Link href="https://github.com/StRane/nextJs-course-demo-chonBurian">
+                  <a
+                    target="_blank"
+                    aria-label="Github repo of project Chonburian webpage"
+                  >
+                    <DiGithubBadge className="projectIcon" />
+                  </a>
+                </Link>
+                <Link href="https://next-js-course-demo-chon-burian.vercel.app/">
+                  <a
+                    target="_blank"
+                    aria-label="Link to project Chonburian webpage"
+                  >
+                    <HiExternalLink className="projectIcon" />
+                  </a>
+                </Link>
               </div>
             </Transition.Child>
             <Transition.Child
