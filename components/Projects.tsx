@@ -54,7 +54,7 @@ function Projects({ position }: Props) {
             <Transition.Child
               appear={true}
               enter="transition-all delay-300 duration-500 flex-1"
-              enterFrom="opacity-0 -translate-x-1/4 flex-1 z-20"
+              enterFrom="opacity-0 -translate-x-4 xl:-translate-x-1/4 flex-1 z-20"
               enterTo="opacity-100 translate-x-0 lg:-translate-x-6 flex-1 z-20"
             >
               <div className="row translateOdd pb-8">
@@ -125,7 +125,7 @@ function Projects({ position }: Props) {
               appear={true}
               enter="transition-all delay-500 duration-500 flex-1"
               enterFrom="opacity-0 translate-x-0 flex-1 z-20"
-              enterTo="opacity-100 translate-x-1/4 flex-1 z-20"
+              enterTo="opacity-100 translate-x-4 xl:translate-x-1/4 flex-1 z-20"
             >
               <div className="rowPic justify-self-end">
                 <Image
@@ -140,7 +140,7 @@ function Projects({ position }: Props) {
             <Transition.Child
               appear={true}
               enter="transition-all delay-500 duration-500 flex-1"
-              enterFrom="opacity-0 translate-x-1/4 flex-1 z-20 "
+              enterFrom="opacity-0 translate-x-4 xl:translate-x-1/4 flex-1 z-20 "
               enterTo="opacity-100 translate-x-0 lg:translate-x-6 flex-1 z-20 "
             >
               <div className="row translateEven pb-8">
@@ -195,7 +195,7 @@ function Projects({ position }: Props) {
             <Transition.Child
               appear={true}
               enter="transition-all delay-700 duration-500 flex-1"
-              enterFrom="opacity-0 -translate-x-1/4 flex-1 z-20"
+              enterFrom="opacity-0 -translate-x-4 xl:-translate-x-1/4 flex-1 z-20"
               enterTo="opacity-100 translate-x-0 lg:-translate-x-6 flex-1 z-20"
             >
               <div className="row translateOdd">
@@ -218,7 +218,6 @@ function Projects({ position }: Props) {
                         React Router CSS Firebase API
                       </p>
                       <div className="flex">
-                        <DiGithubBadge className="projectIcon" />
                         <Link href="https://deployed-c03e9.web.app/quotes">
                           <a
                             target="_blank"
@@ -275,7 +274,7 @@ function Projects({ position }: Props) {
             <Transition.Child
               appear={true}
               enter="transition-all delay-[900ms] duration-500 flex-1"
-              enterFrom="opacity-0 translate-x-1/4 flex-1 z-20"
+              enterFrom="opacity-0 translate-x-4 xl:translate-x-1/4 flex-1 z-20"
               enterTo="opacity-100 translate-x-0 lg:translate-x-6 flex-1 z-20"
             >
               <div className="row translateEven">
@@ -297,7 +296,6 @@ function Projects({ position }: Props) {
                         React CSS Firebase API
                       </p>
                       <div className="flex">
-                        <DiGithubBadge className="projectIcon" />
                         <Link href="https://food-order-bf370.web.app/">
                           <a
                             target="_blank"

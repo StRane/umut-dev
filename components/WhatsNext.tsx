@@ -36,7 +36,7 @@ function WhatsNext() {
           as="p"
           appear={true}
           enter="transition-all ease-in delay-300 duration-300 flex-1"
-          enterFrom="-translate-x-1/5 opacity-0"
+          enterFrom="-translate-x-4 lg:-translate-x-1/5 opacity-0"
           enterTo="translate-x-0 opacity-1"
         >
           I am looking forward to hearing from you.
@@ -45,7 +45,7 @@ function WhatsNext() {
           as="p"
           appear={true}
           enter="transition-all ease-in delay-[400ms] duration-300 flex-1"
-          enterFrom="translate-x-1/5 opacity-0"
+          enterFrom="translate-x-4 lg:translate-x-1/5 opacity-0"
           enterTo="translate-x-0 opacity-1"
         >
           Whether you have a question or just want to say hi,
@@ -54,7 +54,7 @@ function WhatsNext() {
           as="p"
           appear={true}
           enter="transition-all ease-in delay-500 duration-300 flex-1"
-          enterFrom="-translate-x-1/5 opacity-0"
+          enterFrom="-translate-x-4 lg:-translate-x-1/5 opacity-0"
           enterTo="translate-x-0 opacity-1"
         >
           I’ll try my best to get back to you!
@@ -63,7 +63,7 @@ function WhatsNext() {
           as="p"
           appear={true}
           enter="transition-all ease-in delay-[600ms] duration-300 flex-1"
-          enterFrom="translate-x-1/5 opacity-0 pb-10"
+          enterFrom="translate-x-4 lg:translate-x-1/5 opacity-0 pb-10"
           enterTo="translate-x-0 opacity-1 pb-10"
         >
           My most used profiles...
