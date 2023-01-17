@@ -20,8 +20,10 @@ interface Props {
 function Projects({ position }: Props) {
   const [isScrolled, setIsScrolled] = useState(false);
 
+
   useEffect(() => {
     let fix = window.screen.height;
+    
     const handleScroll = () => {
       if (window.scrollY > position - (fix * 10) / 11) {
         setIsScrolled(true);
@@ -38,7 +40,7 @@ function Projects({ position }: Props) {
   }, [position]);
 
   return (
-    <div className="lg:mx-28 min-h-[250vh] lg:min-h-[170vh]">
+    <div className="lg:mx-28 min-h-[250vh] md:min-h-[240vh] xl:min-h-[220vh] 2xl:min-h-[200vh]">
       <Transition show={isScrolled}>
         <Transition.Child
           appear={true}
@@ -49,7 +51,7 @@ function Projects({ position }: Props) {
           <h2 className="pt-20 pb-10 md:pt-20">Projects</h2>
         </Transition.Child>
         <hr className="w-full h-[1px] border-green-mdark -translate-y-8" />
-        <div className="min-h-[220vh] lg:min-h-[170vh]">
+        <div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 sm:gap-y-12 lg:gap-y-20 pt-10">
             <Transition.Child
               appear={true}
