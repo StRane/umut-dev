@@ -5,7 +5,7 @@ import { HiExternalLink } from "react-icons/hi";
 
 import Image1 from "../images/Old projects/Netf/Net1.webp";
 import Image2 from "../images/Old projects/Chonburian/Chonburian1.webp";
-import Image3 from "../images/Old projects/Mosquitopay/Mosquitopay.webp";
+import Image3 from "../images/Old projects/Mosquitopay/mosquitopay.webp";
 import Image4 from "../images/Old projects/Bpis/bpis.webp";
 
 import Link from "next/link";
