@@ -40,7 +40,7 @@ function Projects({ position }: Props) {
   }, [position]);
 
   return (
-    <div className="lg:mx-28 min-h-[250vh] md:min-h-[240vh] xl:min-h-[220vh] 2xl:min-h-[200vh]">
+    <div className="lg:mx-28 min-h-[230vh] xl:min-h-[220vh] 2xl:min-h-[200vh]">
       <Transition show={isScrolled}>
         <Transition.Child
           appear={true}
