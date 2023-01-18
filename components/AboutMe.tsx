@@ -85,48 +85,48 @@ function AboutMe({ position }: Props) {
                 <Transition.Child
                   appear={true}
                   enter="transition-all delay-[1100ms] duration-200 flex-1"
-                  enterFrom="opacity-0 -translate-x-1/4 flex-1"
-                  enterTo="opacity-100 translate-x-0 flex-1"
+                  enterFrom="opacity-0 flex-1"
+                  enterTo="opacity-100 animate-flipIN flex-1"
                 >
                   <li className="relative aboutlistitem">TypeScript</li>
                 </Transition.Child>
                 <Transition.Child
                   appear={true}
                   enter="transition-all delay-[1300ms] duration-200 flex-1"
-                  enterFrom="opacity-0 translate-x-1/4 flex-1"
-                  enterTo="opacity-100 translate-x-0 flex-1"
+                  enterFrom="opacity-0 flex-1"
+                  enterTo="opacity-100 animate-flipIN flex-1"
                 >
                   <li className="relative aboutlistitem">JavaScript</li>
                 </Transition.Child>
                 <Transition.Child
                   appear={true}
                   enter="transition-all delay-[1500ms] duration-200 flex-1"
-                  enterFrom="opacity-0 -translate-x-1/4 flex-1"
-                  enterTo="opacity-100 translate-x-0 flex-1"
+                  enterFrom="opacity-0 flex-1"
+                  enterTo="opacity-100 animate-flipIN flex-1"
                 >
                   <li className="relative aboutlistitem">NodeJS</li>
                 </Transition.Child>
                 <Transition.Child
                   appear={true}
                   enter="transition-all delay-[1700ms] duration-200 flex-1"
-                  enterFrom="opacity-0 translate-x-1/4 flex-1"
-                  enterTo="opacity-100 translate-x-0 flex-1"
+                  enterFrom="opacity-0 flex-1"
+                  enterTo="opacity-100 animate-flipIN flex-1"
                 >
                   <li className="relative aboutlistitem">NextJS</li>
                 </Transition.Child>
                 <Transition.Child
                   appear={true}
                   enter="transition-all delay-[1900ms] duration-200 flex-1"
-                  enterFrom="opacity-0 -translate-x-1/4 flex-1"
-                  enterTo="opacity-100 translate-x-0 flex-1"
+                  enterFrom="opacity-0 flex-1"
+                  enterTo="opacity-100 animate-flipIN flex-1"
                 >
                   <li className="relative aboutlistitem">React</li>
                 </Transition.Child>
                 <Transition.Child
                   appear={true}
                   enter="transition-all delay-[2100ms] duration-200 flex-1"
-                  enterFrom="opacity-0 translate-x-1/4 flex-1"
-                  enterTo="opacity-100 translate-x-0 flex-1"
+                  enterFrom="opacity-0 flex-1"
+                  enterTo="opacity-100 animate-flipIN flex-1"
                 >
                   <li className="relative aboutlistitem">Tailwind</li>
                 </Transition.Child>

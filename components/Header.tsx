@@ -148,7 +148,7 @@ function Header({
                     data-text="My Resume"
                     className="h-10 hover:glitch hover:after:glitchafter hover:before:glitchbefore cursor-pointer"
                   >
-                    <Link href="https://drive.google.com/file/d/1ZCUb5KiwQ2gyi9_ZmDQQ6bF01iRqX1Es/view?usp=share_link">
+                    <Link href="https://drive.google.com/file/d/1iHlZ0GG8MMMwtYt6gIr2uJz0orEbM1vg/view?usp=sharing">
                       <a target="_blank" aria-label="Link to developers resume">
                         My Resume
                       </a>
