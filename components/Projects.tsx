@@ -60,23 +60,23 @@ function Projects({ position }: Props) {
               enterTo="opacity-100 translate-x-0 lg:-translate-x-6 flex-1 z-20"
             >
               <div className="row translateOdd">
-                <div className="z-20 relative space-y-6 md:top-0 md:left-0 md:space-y-8 lg:w-2/3">
+                <div className="z-20 relative py-10 sm:py-0 space-y-6 md:top-0 md:left-0 md:space-y-8 lg:w-2/3">
                   {/* Put some dim color as a theme */}
                   <h3
-                    className="text-shadow-row text-center w-full text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
-                    data-text="Mosquitopay"
+                    className="text-shadow-row text-center w-full text-lg md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
+                    data-text="Mosquito Pay"
                   >
-                    Mosquitopay
+                    Mosquito Pay
                   </h3>
                   <div className="mx-12 md:mx-0 space-y-3 md:space-y-5 text-left">
                     <p className="text-xs sm:text-sm md:text-base">
                       I’ve practiced with design, react tools to generate unique
-                      qr for a given crypto payment method. Connected to
-                      server with socketio.
+                      qr for a given crypto payment method. Connected to server
+                      with socketio.
                     </p>
                     <div>
                       <p className="text-xs sm:text-sm md:text-base">
-                        React Typescript Tailwind Azure
+                        IOTARESTAPI wallet.rs client.rs NodeJS React Typescript Tailwind Azure
                       </p>
                       <div className="flex">
                         <Link href="https://mosquitopay.io/">
@@ -147,7 +147,7 @@ function Projects({ position }: Props) {
               enterTo="opacity-100 translate-x-0 lg:translate-x-6 flex-1 z-20"
             >
               <div className="row translateEven">
-                <div className="z-20 relative space-y-6 md:top-0 md:left-0 md:space-y-8 lg:w-2/3">
+                <div className="z-20 relative space-y-6 py-10 sm:py-0 md:top-0 md:left-0 md:space-y-8 lg:w-2/3">
                   <h3
                     className="text-shadow-row text-center w-full text-lg pt-10 md:pt-0 font-bold sm:text-2xl md:text-3xl glitch after:glitchafter before:glitchbefore"
                     data-text="BPIS website"
@@ -156,7 +156,9 @@ function Projects({ position }: Props) {
                   </h3>
                   <div className="mx-12 md:mx-0 space-y-3 md:space-y-5 text-left">
                     <p className="text-xs sm:text-sm md:text-base">
-                      Designed website for International School in Pattaya. Utilized various design packages and created dynamic pages and navigation with Context.
+                      Designed website for International School in Pattaya.
+                      Utilized various design packages and created dynamic pages
+                      and navigation with Context.
                     </p>
                     <div>
                       <p className="text-xs sm:text-sm md:text-base">
@@ -216,6 +218,24 @@ function Projects({ position }: Props) {
                       <p className="text-xs sm:text-sm md:text-base">
                         NextJS Typescript MUI Firebase API Vercel
                       </p>
+                      <div className="flex">
+                        <Link href="https://github.com/StRane/netflix-clone-tsx-tailwind-next">
+                          <a
+                            target="_blank"
+                            aria-label="Link to project Netflix clone Github repo"
+                          >
+                            <DiGithubBadge className="projectIcon" />
+                          </a>
+                        </Link>
+                        <Link href="https://netflix-clone-tsx-tailwind-next.vercel.app/">
+                          <a
+                            target="_blank"
+                            aria-label="Link to project Netflix clone webpage"
+                          >
+                            <HiExternalLink className="projectIcon" />
+                          </a>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -226,24 +246,6 @@ function Projects({ position }: Props) {
                   layout="fill"
                   placeholder="blur"
                 />
-              </div>
-              <div className="flex row translateOdd mx-10 md:mx-0 xl:mx-[4.5rem] text-left -translate-y-8">
-                <Link href="https://github.com/StRane/netflix-clone-tsx-tailwind-next">
-                  <a
-                    target="_blank"
-                    aria-label="Link to project Netflix clone Github repo"
-                  >
-                    <DiGithubBadge className="projectIcon" />
-                  </a>
-                </Link>
-                <Link href="https://netflix-clone-tsx-tailwind-next.vercel.app/">
-                  <a
-                    target="_blank"
-                    aria-label="Link to project Netflix clone webpage"
-                  >
-                    <HiExternalLink className="projectIcon" />
-                  </a>
-                </Link>
               </div>
             </Transition.Child>
             <Transition.Child
@@ -303,6 +305,24 @@ function Projects({ position }: Props) {
                       <p className="text-xs sm:text-sm md:text-base">
                         React Router CSS MongoDB API
                       </p>
+                      <div className="flex">
+                        <Link href="https://github.com/StRane/nextJs-course-demo-chonBurian">
+                          <a
+                            target="_blank"
+                            aria-label="Github repo of project Chonburian webpage"
+                          >
+                            <DiGithubBadge className="projectIcon" />
+                          </a>
+                        </Link>
+                        <Link href="https://next-js-course-demo-chon-burian.vercel.app/">
+                          <a
+                            target="_blank"
+                            aria-label="Link to project Chonburian webpage"
+                          >
+                            <HiExternalLink className="projectIcon" />
+                          </a>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -313,24 +333,6 @@ function Projects({ position }: Props) {
                   layout="fill"
                   placeholder="blur"
                 />
-              </div>
-              <div className="flex row mx-10 md:mx-0 -translate-y-8 md:-translate-x-10 lg:-translate-x-12 xl:-translate-x-[3.5rem]">
-                <Link href="https://github.com/StRane/nextJs-course-demo-chonBurian">
-                  <a
-                    target="_blank"
-                    aria-label="Github repo of project Chonburian webpage"
-                  >
-                    <DiGithubBadge className="projectIcon" />
-                  </a>
-                </Link>
-                <Link href="https://next-js-course-demo-chon-burian.vercel.app/">
-                  <a
-                    target="_blank"
-                    aria-label="Link to project Chonburian webpage"
-                  >
-                    <HiExternalLink className="projectIcon" />
-                  </a>
-                </Link>
               </div>
             </Transition.Child>
           </div>

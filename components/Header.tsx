@@ -63,13 +63,13 @@ function Header({
   return (
     <>
       <nav
-        className={`w-full z-30 fixed -translate-x-10 px-4 lg:px-20 bg-[#010204] ${
+        className={`w-screen z-30 fixed -translate-x-5 sm:-translate-x-10 px-4 lg:px-20 bg-[#010204] ${
           isScrolled && `drop-shadow-nav`
         }`}
       >
         <>
           <Transition show={!showing}>
-            <ul className="p-4 flex space-x-4 text-sm md:text-base lg:text-xl md:space-x-5 lg:space-x-7 items-center">
+            <ul className="py-4 sm:p-4 flex space-x-2 sm:space-x-4 text-sm md:text-base lg:text-xl md:space-x-5 lg:space-x-7 items-center">
               <li className="flex-1 text-left">
                 <Transition.Child
                   appear={true}
@@ -148,7 +148,7 @@ function Header({
                     data-text="My Resume"
                     className="h-10 hover:glitch hover:after:glitchafter hover:before:glitchbefore cursor-pointer"
                   >
-                    <Link href="https://drive.google.com/file/d/1qeifyT_5iVISZi3i6YDCZOl5XoXLZptF/view?usp=sharing">
+                    <Link href="https://drive.google.com/file/d/1_ez62JncseAZr7v-0EJrWhfncGsblq2Y/view?usp=sharing">
                       <a target="_blank" aria-label="Link to developers resume">
                         My Resume
                       </a>
@@ -272,7 +272,7 @@ UMUT SEBER"
           UMUT SEBER
           <br />
         </h1>
-        <h2 className={styles.customexplanation}>I build things for web</h2>
+        <h2 className={styles.customexplanation}>I build things for web2 and web3</h2>
 
         <Typewriter
           options={{ delay: 50, cursor: "" }}

@@ -41,7 +41,7 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="keywords"
-          content="HTML, CSS, JavaScript, NextJs, Tailwind, Sass, SSR"
+          content="HTML, CSS, JavaScript, NextJs, Tailwind, Sass, SSR, NodeJS, Rust and IOTA"
         />
         <meta
           name="description"

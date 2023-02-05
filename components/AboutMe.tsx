@@ -67,7 +67,7 @@ function AboutMe({ position }: Props) {
               >
                 <p>
                   Fast-forward to today, My main focus these days is building
-                  accessible, fast loading and scaleable web apps used by
+                  accessible, fast loading and scaleable web3 apps used by
                   masses.
                 </p>
               </Transition.Child>

@@ -7,7 +7,7 @@
     @apply scroll-smooth snap-start;
   }
   body {
-    @apply bg-[#010204e8] !scrollbar-none font-space px-10 text-green-matrix;
+    @apply bg-[#010204e8] !scrollbar-none font-space px-5 sm:px-10 text-green-matrix;
   }
   h1 {
     @apply text-4xl lg:text-left font-bold md:text-5xl lg:text-5xl;
@@ -61,7 +61,7 @@
     @apply absolute left-1/2 -translate-x-1/2 h-px w-0 transition-all duration-300 border-green-mlight origin-left block opacity-0 group-hover:opacity-100  group-hover:-translate-x-1/2 group-hover:w-full group-hover:h-10;
   }
   .aboutlistitem {
-    @apply text-shadow-sm before:absolute before:content-['>'] xl:before:content-['🞠'] before:-left-4 before:top-0 pl-3 before:text-shadow-sm;
+    @apply text-shadow-sm before:absolute before:content-['>'] xl:before:content-['🞠'] before:-left-4 before:top-0 pl-1 xl:pl-3 before:text-shadow-sm;
   }
   .buttonstyle {
     @apply h-16 w-16 fill-none border-[12px] border-transparent stroke-white stroke-2	 rounded-full bg-[#1ed93498];
